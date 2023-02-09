@@ -5,16 +5,15 @@ const time = require('time-parser'); //Loads time-parser
 const ffmpeg = require('ffmpeg');
 const {db,pdb} = require('./database.json'); //Loads database and picture database
 const blockedchannels = [];
-const ytdl = require('ytdl-core')
-;const bot = new Discord.Client({disableEveryone: true})
+const ytdl = require('ytdl-core');
+const bot = new Discord.Client({disableEveryone: true})
 
 //Defaults mute to off
 let hardmute = false;
-let timemute = 1;  
+let timemute = 1;
 
 
-
-//Makes sure the bot is on/stays on, uses "arrow function"
+//Makes sure the bot is on/stays on
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`)
   bot.user.setActivity("with your heart.", {type: "PLAYING"});
@@ -298,19 +297,19 @@ bot.on("message", async message => {
   if(cmd === `${prefix}help`){
     
     let helpembed = new Discord.RichEmbed()
-    .setDescription( ${bot.user.username} + "\'s Command List")
+    .setDescription( bot.user.username + "\'s Command List")
     .setColor("17b71a")
-    .addField("mute", 'Removes' + ${bot.user.username} + '\'s speaking privileges indefinitely or for a set amount of time.') //Needs descriptions
-    .addField("unmute", "Returns"  + ${bot.user.username} + "\'s speaking privileges.")
+    .addField("mute", 'Removes ' + bot.user.username + '\'s speaking privileges indefinitely or for a set amount of time.') //Needs descriptions
+    .addField("unmute", "Returns "  + bot.user.username + "\'s speaking privileges.")
     .addField("ping", 'pong!')
-    .addField("add", ${bot.user.username} + " will guide you through adding a new trigger.")
+    .addField("add", bot.user.username + " will guide you through adding a new trigger.")
     .addField("remove", "Removes specified trigger.")
-    .addField("botinfo", "Displays info about " + ${bot.user.username})
-    .addField("serverinfo", "Displays info about the server " + ${bot.user.username} + " is on.")
-    .addField("purge", "Purges an amount of " + ${bot.user.username} + "\'s messages in the current channel.")
-    .addField("list", "Lists all of " + ${bot.user.username} + "\'s triggers.")
-    .addField("reboot", "Reboots " + ${bot.user.username} + " remotely")
-    .addField("stop", "Stops" + ${bot.user.username} + " from talking in the voice channel.")
+    .addField("botinfo", "Displays info about " + bot.user.username)
+    .addField("serverinfo", "Displays info about the server " + bot.user.username + " is on.")
+    .addField("purge", "Purges an amount of " + bot.user.username + "\'s messages in the current channel.")
+    .addField("list", "Lists all of " + bot.user.username + "\'s triggers.")
+    .addField("reboot", "Reboots " + bot.user.username + " remotely")
+    .addField("stop", "Stops " + bot.user.username + " from talking in the voice channel.")
     
     return message.channel.send(helpembed);
 }
@@ -333,7 +332,7 @@ bot.on("message", async message => {
   if (cmd === `${prefix}mute` && !args[0]){
     
     let muteembed = new Discord.RichEmbed()
-    .setDescription( ${bot.user.username} + " has lost his speaking privileges.")
+    .setDescription( bot.user.username + " has lost his speaking privileges.")
     .setColor("17b71a")
     
     return message.channel.send(muteembed);
@@ -365,7 +364,7 @@ bot.on("message", async message => {
     let TimedMute = new Discord.RichEmbed()
     .setDescription(`Cult Boy has been put in timeout for ${(time(arg).relative /1000 / 60).toFixed(2)} minutes`)
     .setColor("17b71a")
-    .setFooter(${bot.user.username} + " will be allowed out of timeout at")
+    .setFooter(bot.user.username + " will be allowed out of timeout at")
     .setTimestamp(new Date(tParse))
     
     return message.channel.send(TimedMute);
