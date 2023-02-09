@@ -1,0 +1,16 @@
+{
+	"db": {
+		"markdown": {
+			"youtubeurl": "",
+			"embed": {
+				"description": "\n\n__**Discord markdown**__\n\nitalics = *italics*\nbold  = **bold**\nbold italics = ***bold italics***\nstrikeout = ~~strikeout~~\nunderline = __underline__\nunderline italics = __*underline italics*__\nunderline bold = __**underline bold**__\nunderline bold italics = __***underline bold italics***__\n\n```\nitalics = *italics*\nbold  = **bold**\nbold italics = ***bold italics***\nstrikeout = ~~strikeout~~\nunderline = __underline__\nunderline italics = __*underline italics*__\nunderline bold = __**underline bold**__\nunderline bold italics = __***underline bold italics***__\n```",
+				"color": 1554202,
+				"image": {
+					"url": ""
+				}
+			}
+		}
+	},
+	"pdb": {
+	}
+}
