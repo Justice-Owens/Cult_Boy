@@ -4,7 +4,7 @@ Cult Boy is a bot made for Discord that really begins to shine once you begin ad
 
 ### How to Install/Run
 
-Cult Boy's repository comes with all of his dependencies in /node_modules. Simply clone the repository into the folder you wish and follow the following steps:
+Clone the repository into the folder you wish and follow the following steps:
 ```
 1. Turn on “Developer mode” in your Discord account
 2. Click on “Discord API”
@@ -15,7 +15,18 @@ Cult Boy's repository comes with all of his dependencies in /node_modules. Simpl
 7. Click on “OAuth2”, activate “bot”, set the permissions, and then click on “Copy”
 8. Select your server to add your bot to it.
 ```
+Then install Cult Boy's dependencies which are listed below with the commands to type into the powershell or command prompt:
+```
+discord.js -> npm i discord.js@12.5.3
 
+ytdl-core -> npm i ytdl-core
+
+fs -> npm i fs
+
+time-parser -> npm i time-parser
+
+ffmpeg -> npm i ffmpeg
+```
 To run Cult Bot, simply open powershell or command prompt in the folder you cloned the bot into and type the following command:
 ```
 node Cult_Boy.js
@@ -23,3 +34,7 @@ node Cult_Boy.js
 
 Cult Boy should appear online in your server and actively respond to messages as long as you leave the powershell or command prompt you used to run it open!
 
+By default, Cult Boy uses the "$" prefix for commands such as help. Enjoy!
+
+#### TODO
+-Update Cult Boy to be compatible with the latest version of discord.js
